@@ -19,7 +19,7 @@ do
 				x=$(ls -l | grep -c ^d)
 				mkdir $x
 				cd $x
-				youtube-dl -o '%(id)s.%(ext)s' -i --no-warnings "$line" > /dev/null
+				youtube-dl -o '%(id)s.%(ext)s' -i "$line" &> /dev/null
 				pageres "$line" > /dev/null
 				cd ..
 				echo $line > backed.txt
