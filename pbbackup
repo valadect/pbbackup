@@ -1,0 +1,30 @@
+#!/bin/bash
+urls=$(mktemp)
+for file in ../police-brutality/reports/*
+do
+		dir=$(basename -s .md	"$file")
+		if [ ! -d "$dir" ]; then
+			mkdir "$dir"	
+			cd $dir
+			touch backed.txt
+			touch nobackup.txt
+			cd ..
+    fi
+    egrep -o 'https?://[^ ]+' "$file" >> "$urls"
+		cd $dir
+		echo -e '\nDownloading' ${dir} 'reports...'
+		diff backed.txt $urls | grep ">" | sed 's/^> //g' > nobackup.txt
+		rm $urls
+		while read line; do
+				x=$(ls -l | grep -c ^d)
+				mkdir $x
+				cd $x
+				youtube-dl -o '%(id)s.%(ext)s' -i --no-warnings "$line" > /dev/null
+				pageres "$line" > /dev/null
+				cd ..
+				echo $line > backed.txt
+		done < nobackup.txt 
+		rm nobackup.txt
+		touch nobackup.txt
+		cd ..
+done
