@@ -19,6 +19,6 @@ A cron job could be used to automate this process by pulling the [2020PB](https:
 
 - Save twitter albums
 - Clone [2020PB](https://github.com/2020PB/police-brutality) at start of script
-- Suppress youtube-dl errors/get youtube-dl to test for downloadable url
+- ~~Suppress youtube-dl errors~~/get youtube-dl to test for downloadable url
 - Custom path support for 2020PB
 - Save webpages sot hey can be viewed offliine (WIP)
