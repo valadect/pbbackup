@@ -10,6 +10,9 @@ Archiving tool for [2020PB](https://github.com/2020PB/police-brutality)
 2. Clone this repo
 3. Provided that the two repos are within the same parent folder, you should be able to ./pbbackup
 
+*Note*
+Depending on your internet connection you may need to change the --timeout flag in pbbackup so that you dont skip screenshots.
+
 ## Explanation
 pbbackup will download any video provided one is available and  then screenshot the page, if there is no video it will just screenshot the page. Then it puts these both in a numeric sub-directory whose parent directory is the location of the incident i.e Arkansas > 0 > video.mp4
 

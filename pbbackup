@@ -20,7 +20,7 @@ do
 				mkdir $x
 				cd $x
 				youtube-dl -i -o '%(id)s.%(ext)s' "$line" &> /dev/null
-				capture-website --timeout 7 "$line" --output screenshot.png &> /dev/null
+				capture-website --timeout 15 "$line" --full-page --output screenshot.png &> /dev/null
 				cd ..
 				echo $line >> backed.txt
 		done < nobackup.txt 
