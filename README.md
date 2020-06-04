@@ -2,7 +2,7 @@
 Archiving tool for [2020PB](https://github.com/2020PB/police-brutality)
 ## Prerequisites
 - [youtube-dl](https://youtube-dl.org/)
-- [pageres](https://github.com/sindresorhus/pageres)
+- [capture-website-cli](https://github.com/sindresorhus/capture-website-cli)
 
 ## Instructions
 

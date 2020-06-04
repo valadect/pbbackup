@@ -11,7 +11,7 @@ do
 			cd ..
     fi
     egrep -o 'https?://[^ ]+' "$file" >> "$urls"
-		cd $dir
+		cd "$dir"
 		echo -e '\nDownloading' ${dir} 'reports...'
 		diff backed.txt $urls | grep ">" | sed 's/^> //g' > nobackup.txt
 		rm $urls
@@ -19,8 +19,8 @@ do
 				x=$(ls -l | grep -c ^d)
 				mkdir $x
 				cd $x
-				youtube-dl -o '%(id)s.%(ext)s' -i "$line" &> /dev/null
-				pageres "$line" > /dev/null
+				youtube-dl -i -o '%(id)s.%(ext)s' "$line" &> /dev/null
+				capture-website --timeout 7 "$line" --output screenshot.png &> /dev/null
 				cd ..
 				echo $line >> backed.txt
 		done < nobackup.txt 
