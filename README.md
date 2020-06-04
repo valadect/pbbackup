@@ -10,7 +10,7 @@ Archiving tool for [2020PB](https://github.com/2020PB/police-brutality)
 2. Clone this repo
 3. Provided that the two repos are within the same parent folder, you should be able to ./pbbackup
 
-*Note*
+*Note*:
 Depending on your internet connection you may need to change the --timeout flag in pbbackup so that you dont skip screenshots.
 
 ## Explanation
@@ -24,4 +24,4 @@ A cron job could be used to automate this process by pulling the [2020PB](https:
 - Clone [2020PB](https://github.com/2020PB/police-brutality) at start of script
 - ~~Suppress youtube-dl errors~~/get youtube-dl to test for downloadable url
 - Custom path support for 2020PB
-- Save webpages sot hey can be viewed offliine (WIP)
+- Save webpages so they can be viewed offliine (WIP)
