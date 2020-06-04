@@ -5,7 +5,7 @@ do
 		dir=$(basename -s .md	"$file")
 		if [ ! -d "$dir" ]; then
 			mkdir "$dir"	
-			cd $dir
+			cd "$dir"
 			touch backed.txt
 			touch nobackup.txt
 			cd ..
