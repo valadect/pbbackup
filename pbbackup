@@ -22,7 +22,7 @@ do
 				youtube-dl -o '%(id)s.%(ext)s' -i "$line" &> /dev/null
 				pageres "$line" > /dev/null
 				cd ..
-				echo $line > backed.txt
+				echo $line >> backed.txt
 		done < nobackup.txt 
 		rm nobackup.txt
 		touch nobackup.txt
